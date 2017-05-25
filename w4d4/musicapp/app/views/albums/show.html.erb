@@ -1,0 +1,18 @@
+<h2 style="color: blue">Album Show</h2>
+
+<a style="margin-left: 300px" href="<%= new_album_track_url(params[:id]) %>">Create a Track</a>
+
+<p><b>Title: </b><%= @album.title %></p>
+<p><b>Artist: </b><%= @album.band.name %></p>
+<p><b>band_id: </b><%= @album.band_id %></p>
+<p><b>Studio Version: </b><%= @album.studio %></p>
+
+<% @album.tracks.each do |track| %>
+  <li><a href="<%= track_url(track.id) %>"><%= track.song %></a></li>
+<% end %>
+
+<form class="" action="<%= album_url(@album.id) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" name="" value="Delete album">
+</form>

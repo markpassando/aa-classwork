@@ -1,0 +1,9 @@
+<h2 style="color: blue">Band Show</h2>
+<a style="margin-left: 300px" href="<%= new_band_album_url(params[:id]) %>">Create An Album</a>
+<p><b>Name: </b><%= @band.name %></p>
+
+<form class="" action="<%= band_url(@band.id) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" name="" value="Delete Band">
+</form>

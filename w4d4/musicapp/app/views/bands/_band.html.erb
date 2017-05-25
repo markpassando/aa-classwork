@@ -1,0 +1,12 @@
+
+<div style="background-color: #e4e4e4">
+
+  <p><b>Name: </b><a href="/bands/<%= band.id %>"><%= band.name %></a></p>
+
+  <b>Albums:</b>
+  <ol>
+    <% band.albums.each do |album| %>
+    <li><a href="/albums/<%= album.id %>"><%= album.title %></a></li>
+    <% end %>
+  </ol>
+</div>

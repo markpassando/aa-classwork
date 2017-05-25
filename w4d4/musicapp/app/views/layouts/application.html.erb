@@ -7,6 +7,40 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <a href="<%= bands_url%>" style="font-size: 2em">HOME</a>
+  <div style="background-color: #e4e4e4;">
+    <% if logged_in? %>
+    <b>Log Out: </b>
+      <form action="<%= session_url %>" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="delete">
+
+        <input type="submit" value="Log Out">
+      </form>
+    <% else %>
+    <b>Login: </b>
+    <% flash[:errors].try(:each) do |error|%>
+      <p style="color:red"><%= error %></p>
+    <% end %>
+
+    <form action="<%= session_url %>" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+      <label for="">Email: </label>
+      <input type="text" name="user[email]" value="">
+
+      <br>
+
+      <label for="">Password: </label>
+      <input type="text" name="user[password]" value="">
+
+      <br>
+
+      <input type="submit" value="Login">
+
+    </form>
+    <% end %>
+  </div>
 
 <%= yield %>
 

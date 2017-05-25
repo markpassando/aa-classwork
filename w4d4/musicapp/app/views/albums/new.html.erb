@@ -1,0 +1,31 @@
+<h2>Create a Album: </h2>
+
+<% flash[:errors].try(:each) do |error|%>
+  <p style="color:red"><%= error %></p>
+<% end %>
+
+<form action="<%= albums_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="">Album Name:</label>
+  <input type="text" name="album[title]" value="">
+
+<br>
+  <label for="">Artist: </label>
+  <select class="" name="album[band_id]">
+    <% @bands.each do |band| %>
+
+
+      <option value="<%= band.id %>" <%= @artist_id.to_i == band.id ? "selected" : "none" %>><%= band.name %></option>
+    <% end %>
+  </select>
+
+<br>
+
+  <label for="">Recording Version:</label>
+  <input type="radio" name="album[studio]" value="1"> Studio
+  <input type="radio" name="album[studio]" value="0"> Live
+
+  <br>
+
+  <input type="submit" value="Add Album">
+</form>
