@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redditclone</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% flash[:errors]&.each do |error| %>
+<p style="color: red"><%= error %></p>
+<% end %>
+
+
+
+<% if logged_in? %>
+<h2>SIGNED IN AS: <%= current_user.username %> </h2>
+  <%= button_to 'Sign Out', session_url, method: :delete %>
+<% else %>
+  <a href="<%= new_session_url %>">Sign In</a>
+<% end %>
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<ul>
+
+</ul>
+
+<b><%= @comment.author.username %></b>
+<%= @comment.contents %>
+
+  <% @comment.child_comments.each do |child| %>
+    get_comments(comment)
+    <a href="<%= comment_url(child) %>"><%= child.content  %></a>
+    <%=  %>
+  <% end %>

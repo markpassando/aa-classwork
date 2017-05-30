@@ -1,0 +1,28 @@
+<h1>Create Post</h1>
+
+<form class="" action="<%= posts_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <input type="hidden" name="post[sub_ids][]" value="<%= params[:sub_id] %>">
+  <label for="">Title
+    <input type="text" name="post[title]" value="<%= @post.title %>">
+  </label>
+  <br>
+
+  <label for="">URL
+    <input type="text" name="post[url]" value="<%= @post.url %>">
+  </label>
+  <br>
+
+  <label for="">Content
+    <input type="text" name="post[content]" value="<%= @post.content %>">
+  </label>
+  <br>
+  <h4>Cross Posts</h4>
+  <% Sub.all.each do |sub_reddit| %>
+    <% next if sub_reddit.id.to_s == params[:sub_id] %>
+    <input type="checkbox" name="post[sub_ids][]" value="<%= sub_reddit.id %>"> <%= sub_reddit.title %>
+  <% end %>
+<br>
+  <input type="submit" name="" value="Create Post">
+</form>
