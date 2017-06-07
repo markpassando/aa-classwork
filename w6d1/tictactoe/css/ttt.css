@@ -1,0 +1,51 @@
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body, ul, li, p {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.ttt {
+  width: 100%;
+  max-width: 330px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.ttt ul {
+    clear: left;
+}
+
+.ttt li {
+    float: left;
+    list-style: none;
+    background-color: #e4e4e4;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+}
+
+.ttt li p {
+  font-size: 4em;
+  text-align: center;
+}
+
+.ttt li:hover {
+    background-color: yellow;
+}
+
+.o-marked {
+  background-color: lightgreen !important;
+}
+
+.x-marked {
+  background-color: #d9a3ff !important;
+}

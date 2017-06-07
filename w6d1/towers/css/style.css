@@ -1,0 +1,23 @@
+h1 {
+  color: black;
+}
+
+.hanoi ul {
+  background-color: #e4e4e4;
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 10px;
+}
+.hanoi ul:hover {
+  background-color: lightblue;
+}
+
+.hanoi li {
+  background-color: lightgreen;
+  list-style: none;
+  text-align: center;
+  position: relative;
+  left: -20px;
+
+}
