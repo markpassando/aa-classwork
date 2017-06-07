@@ -1,0 +1,29 @@
+header {
+  padding: 10px 0;
+  font-family: $sans-serif;
+  border-bottom: 1px solid $light-gray;
+
+  .fa {
+    font-size: 20px;
+  }
+
+  .left-nav {
+    float: left;
+    li {
+      float: left;
+      margin-right: 40px;
+    }
+    .fa {
+      margin: 0 15px;
+    }
+  }
+  .right-nav {
+    float: right;
+    li {
+      float: left;
+      margin: 0 3px;
+      padding: 8px;
+      border-radius: 4px;
+  }
+  }
+}

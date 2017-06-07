@@ -1,0 +1,29 @@
+.middle iframe {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+}
+
+.offers-text {
+  font-size: 10px;
+  color: $gray;
+  text-align: center;
+}
+
+.sign-up input[type="text"] {
+  border: 1px solid $light-gray;
+  width: 75%;
+  padding: 10px;
+}
+
+.sign-btn {
+  display: inline-block;
+    width: 24%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.sign-up {
+  width: 100%;
+}
