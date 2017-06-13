@@ -4,7 +4,7 @@ import store from './store/store.js';
 import selectors from './reducers/selectors';
 import Root from './components/root.jsx';
 
-window.store = store;
+// window.store = store;
 
 // class ToDo extends React.Component {
 //   render(){

@@ -9,12 +9,12 @@ const TodoList = (props) => {
   // });
 
   const list = props.todos.map((todo) => {
-    return <TodoListItem key={todo.id} todo={todo}/>;
+    return <TodoListItem key={todo.id} todo={todo} removeTodo={props.removeTodo} receiveTodo={props.receiveTodo}/>;
   });
   return (
     <div>
       <ul>{list}</ul>
-      <TodoForm receiveTodo={props.receiveTodo}/>
+      <TodoForm receiveTodo={props.receiveTodo} />
     </div>
   );
 };
