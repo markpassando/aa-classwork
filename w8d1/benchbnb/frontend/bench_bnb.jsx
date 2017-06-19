@@ -5,6 +5,7 @@ import Root from './components/root';
 import { requestSignUp, requestLogIn, requestLogOut } from './util/session_api_util';
 
 import { login } from './actions/session_actions';
+import { fetchBenches } from './actions/bench_actions';
 
 window.login = login;
 window.signUp = requestSignUp;
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchBenches = fetchBenches;
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
