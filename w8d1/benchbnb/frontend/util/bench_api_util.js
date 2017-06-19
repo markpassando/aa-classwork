@@ -1,9 +1,17 @@
-export const fetchBenches = () => {
+export const fetchBenches = (filters) => {
   return $.ajax({
   method: 'GET',
   url: '/api/benches/',
+  data: filters
   });
 };
+
+// export const fetchBenches = () => {
+//   return $.ajax({
+//   method: 'GET',
+//   url: '/api/benches/',
+//   });
+// };
 
 export const postBench = (bench) => {
   return $.ajax({

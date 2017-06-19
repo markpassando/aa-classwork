@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { requestSignUp, requestLogIn, requestLogOut } from './util/session_api_util';
+import { fetchBenches } from './util/bench_api_util';
 
 import { login } from './actions/session_actions';
-import { fetchBenches } from './actions/bench_actions';
+// import { fetchBenches } from './actions/bench_actions';
 
-window.login = login;
-window.signUp = requestSignUp;
+// window.login = login;
+// window.signUp = requestSignUp;
 // window.logIn = requestLogIn;
-window.logOut = requestLogOut;
+// window.logOut = requestLogOut;
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -22,9 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.fetchBenches = fetchBenches;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
+  // window.fetchBenches = fetchBenches;
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
