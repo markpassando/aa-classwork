@@ -1,0 +1,95 @@
+// Place all the styles related to the api/posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: sans-serif;
+}
+
+button, .btn {
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 6px;
+  border-radius: 9px;
+}
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.post-index {
+  display: flex;
+  justify-content: space-around;
+}
+
+.post-index ul {
+  list-style: none;
+  width: 400px;
+}
+
+.post-index ul li {
+  // background-color: red;
+  display: flex;
+  padding: 4px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-index ul li div {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+
+.show-post p {
+  text-align: center;
+}
+
+.form {
+  border: 1px solid #999999;
+  width: 300px;
+  padding-bottom: 20px;
+}
+
+.form h2 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.form-inputs {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+}
+
+.form div label {
+  margin-right: 15px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.edit-form {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-form h1 {
+  font-size: 2em;
+  font-weight: normal;
+}
